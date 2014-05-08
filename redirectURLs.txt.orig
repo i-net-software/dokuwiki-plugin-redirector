@@ -1,0 +1,6 @@
+# Redirection of old pages to new ones - those are regular expressions
+# they can be written to overwrite parts again, when the chain goes down to the end
+# KEY   VALUE
+#
+# e.g.
+%^/help/index%      /help
