@@ -28,9 +28,9 @@ class action_plugin_redirector extends DokuWiki_Action_Plugin {
         if ( file_exists(tpl_incdir() . $this->redirectFileName) ) {
             // Look for the redirect file in template directory
             $this->redirectFileName = tpl_incdir() . $this->redirectFileName;
-        } else if ( file_exists(DOKUINC . 'conf/' . $this->redirectFileName) ) {
+        } else if ( file_exists(DOKU_INC . 'conf/' . $this->redirectFileName) ) {
             // Look for the redirect file in template directory
-            $this->redirectFileName = DOKUINC . 'conf/' . $this->redirectFileName;
+            $this->redirectFileName = DOKU_INC . 'conf/' . $this->redirectFileName;
         } else if ( file_exists(dirname(__FILE__) . '/' . $this->redirectFileName) ) {
             // Look for the redirect file in plugin directery
             $this->redirectFileName = dirname(__FILE__) . '/' . $this->redirectFileName;
