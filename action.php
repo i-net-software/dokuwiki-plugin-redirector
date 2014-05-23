@@ -23,7 +23,7 @@ class action_plugin_redirector extends DokuWiki_Action_Plugin {
         global $INFO, $ACT, $conf, $ID;
         
         if ( $INFO['exists'] ){ return; }
-        if ( !($ACT == 'show' || substr($ACT,0,7) == 'export_') ) { return; }
+        if ( !($ACT == 'notfound' || $ACT == 'show' || substr($ACT,0,7) == 'export_') ) { return; }
         
         if ( file_exists(tpl_incdir() . $this->redirectFileName) ) {
             // Look for the redirect file in template directory
