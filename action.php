@@ -51,7 +51,7 @@ class action_plugin_redirector extends DokuWiki_Action_Plugin {
         }
         
         # referer must be set - and its not a bot.
-        if ( $this->getConf('doLog') && !empty($_SERVER['HTTP_REFERER']) && !preg_match('/(?i)bot/', $_SERVER['HTTP_USER_AGENT'])) { dgblog("Redirecting: '{$checkID}' to '{$return}'"); }
+        if ( $this->getConf('doLog') && !empty($_SERVER['HTTP_REFERER']) && !preg_match('/(?i)bot/', $_SERVER['HTTP_USER_AGENT'])) { dbglog("Redirecting: '{$checkID}' to '{$return}'"); }
         
         if ( !empty($_GET) ) {
             unset($_GET['id']);
