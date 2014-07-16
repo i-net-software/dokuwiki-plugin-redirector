@@ -15,7 +15,7 @@ class action_plugin_redirector extends DokuWiki_Action_Plugin {
 
     var $redirectFileName = 'redirectURLs.txt';
     
-    function register(&$controller) {
+    function register(Doku_Event_Handler $controller) {
         $controller->register_hook('ACTION_HEADERS_SEND', 'BEFORE',  $this, '_redirector');
     }
     
