@@ -19,7 +19,7 @@ class action_plugin_redirector extends DokuWiki_Action_Plugin {
         $controller->register_hook('ACTION_HEADERS_SEND', 'BEFORE',  $this, '_redirector');
     }
     
-    function _redirector(&$event, $param) {
+    function _redirector(Doku_Event &$event, $param) {
         global $INFO, $ACT, $conf, $ID;
         
         if ( $INFO['exists'] ){ return; }
